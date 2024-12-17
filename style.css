@@ -1,0 +1,90 @@
+*,*::before,*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: calc(1em + 0.5rem);
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    background-color: #F2C36B;
+    font-family: "Delius", serif;   }
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+.container {
+  perspective: 300px;
+}
+
+.container:hover > .card {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+
+.card {
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+}
+
+.front,
+ .back {
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+} 
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.days {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.daysBox {
+  background-color: #BF213E;
+  color: #fff;
+  padding: 0.8rem 2.5rem;
+  border-left: 8px solid rgb(21 128 61);
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+
+}
+
+.box {
+  background-color: rgb(21 128 61);
+  padding: 1rem 1.2rem;
+  width: 150px;
+  height: 100px;
+  text-align: center;
+  font-size: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  border: 4px solid #F27244;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+}
+
+.box:hover {
+  transform: rotateY(180deg);
+  transition: transform 2800ms;
+}
+
+.des {
+  font-size: 12px;
+}
+
+#card {
+  border-bottom: 14px solid #BF213E;
+  border-top: 14px solid #BF213E;
+  border-radius: 20px;
+}
